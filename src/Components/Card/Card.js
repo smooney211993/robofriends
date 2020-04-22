@@ -1,8 +1,9 @@
 import React from 'react';
 
+
 const Card =()=> {
     return (
-        <div>
+        <div className ="bg-light-green dib br3 ma2 grow">
             <img alt="robots" src='https://robohash.org/yellow/test200x200' />
             <div>
                 <h2>Stephen Mooney</h2>
