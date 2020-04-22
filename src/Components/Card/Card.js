@@ -1,15 +1,22 @@
 import React from 'react';
 
-const Card = (props) =>{ 
-    return (
-        <div className ="bg-light-green dib br3 ma2 grow">
-            <img alt="robots" src={`https://robohash.org/${props.id}/test200x200`} />
-             <div>
-                <h2>{props.name}</h2>
-                <p>{props.email}</p>
+class Card extends React.Component {
+    constructor(props){
+        super(props);
+    }
+
+
+    render() {
+        return (
+            <div className ="bg-light-green dib br3 ma2 grow">
+                <img alt="robots" src={`https://robohash.org/${this.props.id}/test200x200`} />
+                 <div>
+                    <h2>{this.props.name}</h2>
+                    <p>{this.props.email}</p>
+                </div>
             </div>
-        </div>
-     )
+         )
+    }
 }
 
 
