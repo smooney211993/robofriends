@@ -9,7 +9,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <CardList />
+        <h1>Robofriends</h1>
+        <CardList/>
       </div>
     );
   }
