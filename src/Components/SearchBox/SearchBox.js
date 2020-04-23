@@ -4,7 +4,10 @@ import React from 'react';
 class SearchBox extends React.Component {
     render() {
         return (
-            <input type="search" placeholder="Search Robots" />
+            <div>
+                <input type="search" placeholder="Search Robots" />
+                <button>Search</button>
+            </div>
         );
     }
 }
