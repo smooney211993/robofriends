@@ -1,12 +1,10 @@
 import React from 'react';
 
 class Card extends React.Component {
-    constructor(props){
-        super(props);
-    }
-
+   
 
     render() {
+       
         return (
             <div className ="bg-light-green dib br3 ma2 grow">
                 <img alt="robots" src={`https://robohash.org/${this.props.id}/test200x200`} />

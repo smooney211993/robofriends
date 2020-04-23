@@ -7,6 +7,7 @@ import CardList from './Components/Card/CardList'
 import SearchBox from './Components/SearchBox/SearchBox'
 
 class App extends React.Component {
+
   render() {
     return (
       <div className="App">
