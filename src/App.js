@@ -25,7 +25,10 @@ onSearchChange (event){
 
   render() {
     const filteredRobots = this.state.robots.filter((robot)=>{
-      return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
+       if(robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase()) || robot.email.toLowerCase().includes(this.state.searchfield.toLowerCase())){
+         return robot
+       }
+      
   })
     return (
       <div className="App">
