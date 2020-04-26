@@ -2,36 +2,19 @@ import React from 'react';
 
 
 class SearchBox extends React.Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            robots : this.props.robots,
-            searchfield: ''
-
-        }
-       
-    }
-
-    onSearchChange (event){
-            this.setState({searchfield: event.target.value})
-            const filteredRobots = this.state.robots.filter((robot)=>{
-            return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
-        })
-        console.log(filteredRobots);
-    }
-
-
+    
     render() {
         return (
-            <div className = "pa2">
+            <div className = "pa2" >
                 <input 
+                className = "pa3 ba b--green bg-lightest-blue"
                 type="search" 
                 placeholder="Search Robots"
                 onChange = {
-                    (event)=>{
-                        this.onSearchChange(event)
+                    
+                        (event)=>{this.props.searchChange(event)}
                     }
-                }
+                
                  />
                 <button>Search</button>
             </div>
