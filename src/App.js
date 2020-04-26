@@ -36,7 +36,7 @@ return filteredRobots
     
     return (
       <div className="App">
-        <h1>Robofriends</h1>
+        <h1 className ="f1">Robofriends</h1>
         <SearchBox searchChange={(event)=>{
           this.onSearchChange(event)
         }} />
