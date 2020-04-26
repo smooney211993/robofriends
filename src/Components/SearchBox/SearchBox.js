@@ -16,7 +16,7 @@ class SearchBox extends React.Component {
                     }
                 
                  />
-                <button>Search</button>
+              
             </div>
         );
     }

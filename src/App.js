@@ -21,22 +21,26 @@ onSearchChange (event){
    
 }
 
+filter(){
+  const filteredRobots = this.state.robots.filter((robot)=>{
+    if(robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase()) || robot.email.toLowerCase().includes(this.state.searchfield.toLowerCase())){
+      return robot
+    }
+   
+})
+return filteredRobots
+}
 
 
   render() {
-    const filteredRobots = this.state.robots.filter((robot)=>{
-       if(robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase()) || robot.email.toLowerCase().includes(this.state.searchfield.toLowerCase())){
-         return robot
-       }
-      
-  })
+    
     return (
       <div className="App">
         <h1>Robofriends</h1>
         <SearchBox searchChange={(event)=>{
           this.onSearchChange(event)
         }} />
-        <CardList robots={filteredRobots} />
+        <CardList robots={this.filter()} />
       </div>
     );
   }
