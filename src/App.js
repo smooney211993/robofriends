@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import {robots} from './Components/Card/robots'
 import CardList from './Components/Card/CardList'
 import SearchBox from './Components/SearchBox/SearchBox'
 
@@ -8,11 +7,24 @@ class App extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-        robots : robots,
+        robots : [],
         searchfield: ''
 
     }
    
+}
+async componentDidMount (){
+  try {
+  const response = await fetch('https://jsonplaceholder.typicode.com/users');
+  if(response.ok){
+    const jsonResponse = await response.json();
+    this.setState({robots: jsonResponse })
+  }
+} catch(error) {
+  console.log(error)
+
+}
+  
 }
 
 onSearchChange (event){
