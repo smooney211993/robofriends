@@ -10,13 +10,8 @@ class SearchBox extends React.Component {
                 className = "pa3 ba b--green bg-lightest-blue"
                 type="search" 
                 placeholder="Search Robots"
-                onChange = {
-                    
-                        (event)=>{this.props.searchChange(event)}
-                    }
-                
+                onChange = {(event)=>{this.props.searchChange(event)}}
                  />
-              
             </div>
         );
     }
